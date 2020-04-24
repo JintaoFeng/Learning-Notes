@@ -51,3 +51,27 @@ git merge <name>
 git config --global core.quotepath false
 ```
 
+### 删除分支
+
+```
+git branch -d <name>
+```
+
+### 分支管理
+
+通常，合并分支时，git会用`Fast forward`模式，在这种模式下，删除分支会丢掉分支信息，我们可以加上`--no--ff`参数禁用`Fast forward`模式，git在merge时生成一个新的commit。
+
+```
+$ git merge dev
+Updating 6992160..c7076aa
+Fast-forward
+ Git/git总结.md | 53 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 53 insertions(+)
+ create mode 100644 Git/git总结.md
+
+```
+
+```
+
+```
+
