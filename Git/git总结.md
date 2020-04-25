@@ -309,7 +309,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 新安装的git我们先需要配置一下账户，
 
 ```
-git comfig --alobal user.name "your name"
+git comfig --global user.name "your name"
 git config --global user.email "email"
 ```
 
