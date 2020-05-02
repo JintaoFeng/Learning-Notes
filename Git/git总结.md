@@ -384,4 +384,14 @@ git 删除版本库中的文件但是并不删除工作空间中相应的文件�
 git rm <file> --cached
 ```
 
-如果远程仓库
+## 问题总结
+
+![](..\picture\微信截图_20200430172720.png)
+
+git中无论push还是pull会弹出上面的error。这是因为GitHub仅用了TLS v1.0和v1.1，我们必须更新一下Windows的凭证管理器才行。打开下面链接，下载相应的程序安装：
+
+https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0
+
+![](..\picture\微信截图_20200430173544.png)
+
+下载安装即可。
