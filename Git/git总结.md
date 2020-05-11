@@ -395,3 +395,18 @@ https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.
 ![](..\picture\微信截图_20200430173544.png)
 
 下载安装即可。
+
+## 问题2
+
+今天从本地仓库链接GitHub仓库时弹出这样一个错误
+
+![](..\picture\微信截图_20200503130258.png)
+
+这个是你的名字origin冲突了，可以用以下办法解决
+
+```
+git remote rm origin
+git remote add origin ********************
+```
+
+依次输入命令即可。
