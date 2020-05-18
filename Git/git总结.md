@@ -428,3 +428,17 @@ git commit --amend
 ```
 
 这条命令能把现在的提交追加到上一次的提交里，并且可以重写修改注释。
+=======
+### git删除本地和远程分支
+
+删除本地分支
+
+```
+git branch -d <branch_name> 
+```
+
+删除远程分支
+
+```
+git push origin --delete <branch_name>
+```
