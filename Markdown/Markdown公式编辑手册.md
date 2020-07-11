@@ -27,9 +27,15 @@ $\LaTeX$ 的数学公式有两种：行中公式和独立公式。行中公式�
 **自动编号后的公式可在全文任意处使用 `\eqref{eq:公式名}` 语句引用。**
 
 - 例子：
+
+
+
 ```
+
+
 $ J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例} $
 ```
+
 - 显示：$ J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma (m + \alpha + 1)} {\left({ \frac{x}{2} }\right)}^{2m + \alpha} \text {，行内公式示例} $
 
 - 例子：
