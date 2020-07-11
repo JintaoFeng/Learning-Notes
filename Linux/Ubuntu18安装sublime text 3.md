@@ -1,7 +1,6 @@
 ## sublime text3 的安装
 
 ```
-
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
@@ -38,5 +37,4 @@ cd sublime-text-imfix && ./sublime-imfix
 ![](..\picture\微信截图_20200430123646.png)
 
 如果想要切换回英文，可以在`help`中找到`Language`选项，在下拉菜单中选择相应语言即可.
-
 ![](..\picture\微信截图_20200430123919.png)
