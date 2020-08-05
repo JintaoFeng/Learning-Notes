@@ -429,6 +429,8 @@ git commit --amend
 
 这条命令能把现在的提交追加到上一次的提交里，并且可以重写修改注释。
 =======
+
+
 ### git删除本地和远程分支
 
 删除本地分支
@@ -442,3 +444,121 @@ git branch -d <branch_name>
 ```
 git push origin --delete <branch_name>
 ```
+
+## git将主分支的提交合并到分支上
+
+```
+git cherry-pick <commiy_id>
+
+```
+
+
+
+### 配置比较工具
+
+```
+git config --global merge.tool vimdiff
+```
+
+### git ssh配置和使用
+
+1.  设置git的user name和email(第一次使用)
+
+```
+git config --global user.name "name"
+git config --global user.email "xxxx@xxxx"
+```
+
+2.  检查是否已经有SSH KEY
+
+```
+cd ~/.ssh
+ls
+```
+
+列出该文件夹下的文件，看是否有id_rsa和id_rsa.pub文件
+
+![](../picture\微信截图_20200805195532.png)
+
+3.  生成密匙
+
+```
+ssh-keygen -t rsa -C "xxxxx@xxx.com"
+```
+
+连续三个回车，最后得到第二步所示的两个文件。
+
+默认的存储路径
+
+```
+C:\Users\Administrator\.ssh
+```
+
+4.  添加密匙到ssh-agent
+
+
+
+​		确保 ssh-agent 是可用的。ssh-agent是一种控制用来保存公钥身份验证所使用的私钥的程序，其实ssh-agent就是一个密钥管理器，运行ssh-agent以后，使用ssh-add将私钥交给ssh-agent保管，其他程序需要身份验证的时候可以将验证申请交给ssh-agent来完成整个认证过程。
+
+```
+eval "$(ssh-agent -s)"
+```
+
+添加生成的SSH key到ssh-agent
+
+```
+ssh-add ~/.ssh/id_rsa
+```
+
+5.  登录github，添加ssh
+6.  测试
+
+```
+ssh -T github.com
+```
+
+结果如下:
+
+![](..\picture\微信截图_20200805200953.png)
+
+#### 扩展
+
+若果我们以前的仓库是通过https提交的，那么我们现在想用ssh的方式提交。可以用以下方法：
+
+找到仓库下的.git文件夹的config文件，打开可以看到以下内容：
+
+```
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[branch "5.9.9"]
+	remote = origin
+	merge = refs/heads/5.9.9
+[remote "origin/master"]
+	url = https://github.com/JintaoFeng/huawei_MotionStage_2.git
+	fetch = +refs/heads/*:refs/remotes/origin/master/*
+
+```
+
+可以修改为:
+
+```
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[branch "5.9.9"]
+	remote = origin
+	merge = refs/heads/5.9.9
+[remote "origin/master"]
+	url = git@github.com:JintaoFeng/huawei_MotionStage_2.git
+	fetch = +refs/heads/*:refs/remotes/origin/master/*
+```
+
