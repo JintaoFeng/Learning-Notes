@@ -938,7 +938,7 @@ $$
 
 - 显示：
 $$
-        \left.
+\left.
         \begin{array}{l}
         \text{if $n$ is even:}&n/2\\
         \text{if $n$ is odd:}&3n+1
