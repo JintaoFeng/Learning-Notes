@@ -29,6 +29,16 @@ write_enable=YES
 sudo /etc/init.d/vsftpd restart
 ```
 
+启动ftp
+
+```
+service vsftpd start
+```
+
+
+
+
+
 ## 安装NFS
 
 后面进行Linux驱动开发的时候需要用到NFS网络服务，因此需要安装并开启Ubuntu下的NFS服务，可使用如下命令：

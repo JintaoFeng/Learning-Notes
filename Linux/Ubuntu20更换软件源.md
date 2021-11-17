@@ -32,3 +32,4 @@ ubuntu系统中，软件源的地址为：`/etc/apt/sources.list`
 2. 打开`/etc/apt/sources.list`文件。在前面添加以上目录，并保存。
 
 3. 对于x86系统，在`/ubuntu`路径中存在软件源，但是在arm系统中，需要设置为`/ubuntu-ports`路径。
+
