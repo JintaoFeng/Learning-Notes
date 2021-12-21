@@ -1,4 +1,0 @@
-{
-    "plugins": ["summary","mathjax@2","katex"],
-    "title": "learning notes"
-}
