@@ -80,3 +80,31 @@ sudo apt-get install openssh-server
 ```
 
 ssh的配置文件为/etc/ssh/sshd_config
+
+### 重启服务
+
+启动sshd服务
+
+```
+service sshd start
+```
+
+检查sshd服务是否已经启动：
+
+```
+ps -e |grep sshd
+```
+
+将sshd服务添加到自启列表，并检查是否开启自启动sshd服务：
+
+```
+systemctl enable sshd.service
+systemctl list-unit-files |grep sshd
+```
+
+
+
+如下操作：
+
+![image-20220212170813293](..\picture\image-20220212170813293.png)
+
