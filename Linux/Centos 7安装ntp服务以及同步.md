@@ -47,10 +47,7 @@ server 3.centos.pool.ntp.org iburst
 
 ```
 # Hosts on local network are less restricted.
-restrict 192.168.1.0 mask 255.255.255.0 nomodify notrap
-
-#restrict 192.168.48.0 mask 255.255.255.0 nomodify notrap
-#restrict 192.168.43.0 mask 255.255.255.0 nomodify notrap
+#restrict 192.168.1.0 mask 255.255.255.0 nomodify notrap
 
 # Use public servers from the pool.ntp.org project.
 # Please consider joining the pool (http://www.pool.ntp.org/join.html).
@@ -68,7 +65,7 @@ ntp服务使用的端口是123，用的是udp协议。
 
 ```
 firewall-cmd --permanent --add-port=123/udp
-serv
+firewall-cmd --reload
 ```
 
 查看防火墙已打开端口。
