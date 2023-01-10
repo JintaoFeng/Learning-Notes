@@ -179,7 +179,7 @@ git branch -D <name>
 在本地创建远程的其他分支
 
 ```
-git checout -b dev origin/dev
+git checkout -b dev origin/dev
 ```
 
 当`git pull`提示` no tracking information `，说明本地分支和远程分支没有建立链接关系，可以用以下命令创建。
